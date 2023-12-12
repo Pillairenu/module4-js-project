@@ -205,7 +205,8 @@ footer {
     padding-right: 20%;
     padding-left: 20%;
     padding-bottom: 20%;
-
+    background-color: white;
+    color: #343434;
 }
 
 /* Media Query for Desktop View */
