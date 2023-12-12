@@ -59,7 +59,8 @@
               document.getElementById('signupSuccess').classList.add('hidden');
               
               // Redirect to login page after success
-              showLoginForm();
+              alert('Login Successful!');
+              //showLoginForm();
             }, 3000);
             
           } catch (error) {
