@@ -2,9 +2,16 @@
   window.addEventListener("load", async (event) => {
     // create the feathers application object
     const app = feathers();
-    // Establish a connection to the Feathers server
-    const socket = io('http://localhost:3030'); 
-    app.configure(feathers.socketio(socket));
+   
+
+    // create the feathers REST client
+    const restClient = feathers.rest();
+    
+    // configure the feathers application to use the REST client
+    // and the browser's fetch() method
+    app.configure(restClient.fetch(window.fetch.bind(window)));
+
+    // Configure authentication - if needed
     app.configure(feathers.authentication());
 
     // Signup form template with form submission and a link to the login form
@@ -60,6 +67,9 @@
           // Hide success message after 3 seconds
           setTimeout(() => {
             document.getElementById('signupSuccess').classList.add('hidden');
+            
+            // After signup, show the login form
+            showLoginForm(); // Call the function to display login form
           }, 3000);
           
         } catch (error) {
@@ -125,7 +135,7 @@
           alert('Login Successful!');
           
           // Redirect to another page after success
-          window.location.href = 'http://localhost:3030/moview_review.html';
+          window.location.href = '/moview_review.html';
           
         } catch (error) {
           console.error('Error logging in:', error.message);
