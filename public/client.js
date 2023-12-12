@@ -76,6 +76,7 @@
           console.error('Error creating user:', error.message);
           // Handle error scenarios here (e.g., display error message to the user)
         }
+        
       });
 
       // Event listener for the "Login here" link
@@ -87,26 +88,29 @@
 
     // Login form template with form submission
     const loginFormTemplate = () => `<div class="login flex min-h-screen bg-neutral justify-center items-center">
-      <div class="card w-full max-w-sm bg-base-100 px-4 py-8 shadow-xl">
-        <div class="px-4">
-          <h1 class="text-2xl font-bold text-center my-5 bg-clip-text bg-gradient-to-br">
-            Film Critique Explorer Login
-          </h1>
-          <p class="text-center">Login your account using email & password.</p>
-        </div>
-        <form class="card-body pt-2" id="loginForm">
-          <div class="form-control">
-            <label for="email" class="label"><span class="label-text">Email</span></label>
-            <input type="text" id="loginEmail" name="email" placeholder="enter email" class="input input-bordered">
-          </div>
-          <div class="form-control mt-0">
-            <label for="password" class="label"><span class="label-text">Password</span></label>
-            <input type="password" id="loginPassword" name="password" placeholder="enter password" class="input input-bordered">
-          </div>
-          <div class="form-control mt-6"><button id="login" type="submit" class="btn">Login</button></div>
-        </form>
+    <div class="card w-full max-w-sm bg-base-100 px-4 py-8 shadow-xl">
+      <div class="px-4">
+        <h1 class="text-2xl font-bold text-center my-5 bg-clip-text bg-gradient-to-br">
+          Film Critique Explorer Login
+        </h1>
+        <p class="text-center">Login your account here!</p>
       </div>
-    </div>`;
+      <form class="card-body pt-2" id="loginForm">
+        <div class="form-control">
+          <label for="email" class="label"><span class="label-text">Email</span></label>
+          <input type="text" id="loginEmail" name="email" placeholder="enter email" class="input input-bordered">
+        </div>
+        <div class="form-control mt-0">
+          <label for="password" class="label"><span class="label-text">Password</span></label>
+          <input type="password" id="loginPassword" name="password" placeholder="enter password" class="input input-bordered">
+        </div>
+        <div class="form-control mt-6"><button id="login" type="submit" class="btn">Login</button></div>
+      </form>
+      <div class="text-center mt-4">
+        Don't have an account? <a href="#" id="showSignupForm">Sign up here</a>.
+      </div>
+    </div>
+  </div>`;
 
     // Function to display the login form
     const showLoginForm = () => {
