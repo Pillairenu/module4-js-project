@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+/* Setting up basic styles */
+body {
+
+
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #F7FFF7;
+    color: #343434;
+
+}
+
+/* Header Styles */
+header {
+    background-color: #343434;
+    color: #F7FFF7;
+    padding: 2rem;
+    font-family: "Arial", sans-serif;
+}
+
+
+
+h1 {
+
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+
+.content-wrap {
+
+    max-width: 600px;
+    width: 85%;
+    padding: 40px 20px;
+    margin: 150px auto;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+
+}
+
+/* Section Styles */
+section {
+    text-align: center;
+}
+
+section p {
+    color: #800000;
+    font-size: 1.5rem;
+
+}
+
+a.button {
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #FF5733;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #FF814A;
+}
+
+/* Styling for the form */
+
+h2 {
+    font-size: 1.4rem;
+    color: #800000;
+    margin-bottom: 35px;
+    text-align: center;
+
+}
+
+.form-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+}
+
+.form-field {
+    flex: 0 0 calc(49% - 10px);
+    margin-bottom: 15px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+input[type="text"],
+select {
+    color: #343434;
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    background-color: #f0f0f0;
+    border-color: #555;
+    outline: none;
+}
+
+
+/* Styling for the back button */
+.back_button {
+    margin-top: 20px;
+}
+
+.back_button a {
+    font-size: 1.3rem;
+    padding: 30px;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.back_button a:hover {
+
+    color: #FF814A;
+}
+
+.form-field input[type="submit"] {
+    background-color:
+        rgb(240, 99, 39);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+#findarticles {
+    background-color:
+        rgb(240, 99, 39);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+/* Change button background color on hover */
+.form-field input[type="submit"]:hover {
+    background-color: #FF814A;
+    /* Darker green color on hover */
+}
+
+#findarticles:hover {
+    background-color: #FF814A;
+}
+
+/* Styling for the footer */
+footer {
+    font-family: "Arial", sans-serif;
+    padding: 20px 0;
+    background-color: #343434;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.search-results {
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 20%;
+
+}
+
+/* Media Query for Desktop View */
+@media (min-width: 750px) {
+
+
+    .form-container {
+
+        flex-direction: row;
+    }
+}
